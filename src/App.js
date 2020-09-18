@@ -9,7 +9,7 @@ const APP_KEY = "d522d23447c1d71db4989e5805bc6c7d";
 
 const [recipes, setRecipies] = useState([]);
 const [search, setSearch] = useState("");
-const [query, setQuery] = useState('chicken');
+const [query, setQuery] = useState('');
 
 useEffect(()=> {
   getRecepies();
@@ -42,6 +42,7 @@ const getSearch = e => {
          Search
         </button>
       </form>
+      <h1 className ="recipes">You can find all recipes using the search field above</h1>
       <div className="recipes">
       {recipes.map(recipe =>(
         <Recipe 
